@@ -17,11 +17,42 @@ Every time Claude Code is thinking, you see something like:
 | `spinner-verbs.json` | The `spinnerVerbs` block to merge into your Claude Code settings |
 | `README.md` | This file — install steps and the install prompt |
 
+## Links
+
+| | |
+|---|---|
+| Repo | https://github.com/hijam-git/claude-tasbih |
+| Verbs file (browse) | https://github.com/hijam-git/claude-tasbih/blob/main/spinner-verbs.json |
+| Verbs file (raw) | https://raw.githubusercontent.com/hijam-git/claude-tasbih/refs/heads/main/spinner-verbs.json |
+
 ## Install
 
-### Option A — let Claude Code do it (recommended)
+### Option A — one prompt, no clone (recommended)
 
-Open Claude Code in this repo and paste the prompt below.
+Paste this into Claude Code from **anywhere** — it fetches the verbs straight from
+GitHub, no need to clone this repo.
+
+> Fetch https://raw.githubusercontent.com/hijam-git/claude-tasbih/refs/heads/main/spinner-verbs.json
+> and merge its top-level `spinnerVerbs` key into my Claude Code user settings at
+> `~/.claude/settings.json` (on Windows: `C:\Users\<me>\.claude\settings.json`).
+>
+> Requirements:
+> - Preserve every existing key in my settings file — do not drop or reorder my current
+>   settings.
+> - If a `spinnerVerbs` key already exists, replace it wholesale with the fetched one.
+> - Write the file as UTF-8 **without a BOM** — the verbs contain em dashes (`—`) and
+>   apostrophes that get corrupted into `â€"` if a tool reads or writes UTF-8 as ANSI.
+>   Do not use Windows PowerShell 5.1 `Get-Content` / `Out-File` for this; use the Read
+>   and Write tools, or `[IO.File]::ReadAllText` / `WriteAllText`.
+> - Keep the result valid JSON (correct commas) and verify by parsing it after writing.
+> - Confirm the verb count and tell me to restart Claude Code so it takes effect.
+
+If the fetch is blocked or returns HTML instead of JSON, download the raw file yourself
+and point Claude at the local path, or use Option B.
+
+### Option B — let Claude Code do it from a clone
+
+Clone this repo, open Claude Code inside it, and paste:
 
 > Read `spinner-verbs.json` in this repo and merge its top-level `spinnerVerbs` key into
 > my Claude Code user settings at `~/.claude/settings.json` (on Windows:
@@ -49,18 +80,20 @@ Variants you can append to that prompt:
 - **Uninstall:** "Remove the `spinnerVerbs` key from my Claude Code settings, keep every
   other key intact, verify the file still parses, and remind me to restart."
 
-### Option B — edit settings.json directly
+### Option C — edit settings.json directly
 
 Yes, editing `settings.json` by hand is perfectly fine — it is the same result, and
-there is no separate install step or CLI for spinner verbs. Option A is only better
-because Claude does the JSON merge and comma bookkeeping for you.
+there is no separate install step or CLI for spinner verbs. The prompt options are only
+better because Claude does the JSON merge and comma bookkeeping for you.
 
-1. Open your user settings file:
+1. Open the [raw verbs file](https://raw.githubusercontent.com/hijam-git/claude-tasbih/refs/heads/main/spinner-verbs.json)
+   and copy it.
+2. Open your user settings file:
    - Windows: `C:\Users\<you>\.claude\settings.json`
    - macOS / Linux: `~/.claude/settings.json`
-2. Copy the `"spinnerVerbs": { ... }` object from `spinner-verbs.json` and paste it in
-   as a **top-level key**, alongside your existing keys.
-3. Mind the commas — the file must stay valid JSON. Example result:
+3. Paste the `"spinnerVerbs": { ... }` object in as a **top-level key**, alongside your
+   existing keys.
+4. Mind the commas — the file must stay valid JSON. Example result:
 
 ```json
 {
@@ -73,8 +106,8 @@ because Claude does the JSON merge and comma bookkeeping for you.
 }
 ```
 
-4. Save as **UTF-8 without BOM** (see [Encoding](#encoding-the-â€-problem) below).
-5. Restart Claude Code (`/exit`, then relaunch). The spinner picks a random verb per turn.
+5. Save as **UTF-8 without BOM** (see the Encoding section below).
+6. Restart Claude Code (`/exit`, then relaunch). The spinner picks a random verb per turn.
 
 ## Settings reference
 

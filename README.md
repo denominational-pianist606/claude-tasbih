@@ -5,10 +5,11 @@ the tasbih phrases and the 99 Names of Allah (Asma-ul-Husna).
 
 Every time Claude Code is thinking, you see something like:
 
-```
-✳ SubhanAllah — Glory be to Allah… (12s · ↑ 1.4k tokens · esc to interrupt)
-✳ Al-Fattah — The Opener… (4s · ↑ 320 tokens · esc to interrupt)
-```
+![Astaghfirullah — I seek Allah's forgiveness](docs/astaghfirullah.png)
+
+![Ar-Raheem — The Most Merciful](docs/ar-raheem.png)
+
+![Al-Musawwir — The Fashioner](docs/al-musawwir.png)
 
 ## What's in here
 
@@ -16,6 +17,7 @@ Every time Claude Code is thinking, you see something like:
 |---|---|
 | `spinner-verbs.json` | The `spinnerVerbs` block to merge into your Claude Code settings |
 | `README.md` | This file — install steps and the install prompt |
+| `docs/` | Screenshots used above |
 
 ## Links
 

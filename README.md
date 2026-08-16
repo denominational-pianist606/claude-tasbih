@@ -16,6 +16,16 @@ Every time Claude Code is thinking, you see something like:
   </tr>
 </table>
 
+## About
+
+Claude Code shows a random verb while it thinks — "Cogitating…", "Noodling…",
+"Percolating…". It is idle text you end up reading dozens of times a day.
+
+This swaps that idle text for dhikr: the five core tasbih phrases followed by the 99
+Names of Allah, each with its English meaning. The waiting time you cannot avoid becomes
+a moment of remembrance instead of filler. Nothing else changes — it is a single
+cosmetic setting, with no effect on how Claude Code behaves.
+
 ## What's in here
 
 | File | Purpose |

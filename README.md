@@ -24,14 +24,6 @@ Every time Claude Code is thinking, you see something like:
 | `README.md` | This file — install steps and the install prompt |
 | `docs/` | Screenshots used above |
 
-## Links
-
-| | |
-|---|---|
-| Repo | https://github.com/hijam-git/claude-tasbih |
-| Verbs file (browse) | https://github.com/hijam-git/claude-tasbih/blob/main/spinner-verbs.json |
-| Verbs file (raw) | https://raw.githubusercontent.com/hijam-git/claude-tasbih/refs/heads/main/spinner-verbs.json |
-
 ## Install
 
 ### Option A — one prompt, no clone (recommended)
@@ -39,9 +31,14 @@ Every time Claude Code is thinking, you see something like:
 Paste this into Claude Code from **anywhere** — it fetches the verbs straight from
 GitHub, no need to clone this repo.
 
-> Fetch https://raw.githubusercontent.com/hijam-git/claude-tasbih/refs/heads/main/spinner-verbs.json
-> and merge its top-level `spinnerVerbs` key into my Claude Code user settings at
-> `~/.claude/settings.json` (on Windows: `C:\Users\<me>\.claude\settings.json`).
+> Install the Islamic dhikr spinner verbs for Claude Code.
+>
+> - Repo: https://github.com/hijam-git/claude-tasbih
+> - Verbs file (browse): https://github.com/hijam-git/claude-tasbih/blob/main/spinner-verbs.json
+> - Verbs file (raw, fetch this one): https://raw.githubusercontent.com/hijam-git/claude-tasbih/refs/heads/main/spinner-verbs.json
+>
+> Fetch the raw URL and merge its top-level `spinnerVerbs` key into my Claude Code user
+> settings at `~/.claude/settings.json` (on Windows: `C:\Users\<me>\.claude\settings.json`).
 >
 > Requirements:
 > - Preserve every existing key in my settings file — do not drop or reorder my current

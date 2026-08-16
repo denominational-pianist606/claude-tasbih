@@ -1,4 +1,6 @@
-# claude-tasbih
+# claude-tasbih — Islamic Vibe Coding
+
+**Dhikr in your terminal: tasbih & the 99 Names of Allah, every time Claude Code thinks**
 
 [![Star this repo](https://img.shields.io/github/stars/hijam-git/claude-tasbih?style=social)](https://github.com/hijam-git/claude-tasbih)
 [![Follow @hijam-git](https://img.shields.io/github/followers/hijam-git?label=Follow&style=social)](https://github.com/hijam-git)

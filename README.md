@@ -1,15 +1,20 @@
 # claude-tasbih
 
+[![Star this repo](https://img.shields.io/github/stars/hijam-git/claude-tasbih?style=social)](https://github.com/hijam-git/claude-tasbih)
+[![Follow @hijam-git](https://img.shields.io/github/followers/hijam-git?label=Follow&style=social)](https://github.com/hijam-git)
+
 Replace Claude Code's random spinner verbs ("Cogitating…", "Noodling…") with dhikr —
 the tasbih phrases and the 99 Names of Allah (Asma-ul-Husna).
 
 Every time Claude Code is thinking, you see something like:
 
-![Astaghfirullah — I seek Allah's forgiveness](docs/astaghfirullah.png)
-
-![Ar-Raheem — The Most Merciful](docs/ar-raheem.png)
-
-![Al-Musawwir — The Fashioner](docs/al-musawwir.png)
+<table>
+  <tr>
+    <td width="33%"><img src="docs/astaghfirullah.png" alt="Astaghfirullah — I seek Allah's forgiveness" width="100%"></td>
+    <td width="33%"><img src="docs/ar-raheem.png" alt="Ar-Raheem — The Most Merciful" width="100%"></td>
+    <td width="33%"><img src="docs/al-musawwir.png" alt="Al-Musawwir — The Fashioner" width="100%"></td>
+  </tr>
+</table>
 
 ## What's in here
 
@@ -157,3 +162,15 @@ To go back to the defaults, delete the `spinnerVerbs` key and restart.
 
 - Transliterations use a simple Latin scheme without diacritics for terminal safety.
 - Purely cosmetic — no effect on Claude Code's behaviour, permissions, or billing.
+
+## Support this project
+
+If the dhikr spinner brought a bit of barakah to your terminal:
+
+- ⭐ **[Star the repo](https://github.com/hijam-git/claude-tasbih)** — it helps other
+  Muslim developers find it.
+- 👤 **[Follow @hijam-git](https://github.com/hijam-git)** for more Claude Code tweaks.
+- 🐛 Open an issue or PR with corrections to any transliteration or meaning — accuracy
+  matters more than speed here.
+
+Jazakum Allahu khayran.

